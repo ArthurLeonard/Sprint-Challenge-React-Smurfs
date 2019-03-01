@@ -1,3 +1,14 @@
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  border: solid lightgrey;
+  flex-direction: column;
+  background-color: rgb(253, 137, 156);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
 }
