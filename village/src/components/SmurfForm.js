@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./components.css";
 
 class SmurfForm extends Component {
   constructor(props) {
@@ -14,11 +15,25 @@ class SmurfForm extends Component {
     event.preventDefault();
     // add code to create the smurf using the api
 
+    
+    console.log(`in handleSubmit method`);
+    const newSmurf = {
+        name:this.state.name,
+        age: this.state.age,
+        height: this.state.height
+        // id: this.state.id
+    };
+
     this.setState({
       name: '',
       age: '',
       height: ''
     });
+   
+    this.props.addItem(event, newSmurf);
+    console.log(`New smurf is ${newSmurf.name} ${newSmurf.age}`);
+
+    
   }
 
   handleInputChange = e => {
